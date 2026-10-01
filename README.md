@@ -4,7 +4,7 @@
 
 Greg Jennings · October 1, 2026
 
-*Disclosure: I'm VP of Engineering for AI at Anaconda, which acquired the AI security company Enkrypt AI in August 2026. Enkrypt sells tools for securing AI agents, including some of the kinds of controls this article recommends.*
+*Disclosure: I'm VP of Incubation, running "Practical R&D" at Anaconda, which acquired the AI security company Enkrypt AI in August 2026. Enkrypt sells tools for securing AI agents, including some of the kinds of controls this article recommends.*
 
 ## The note in the package cache
 
