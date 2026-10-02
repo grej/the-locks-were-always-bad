@@ -4,7 +4,7 @@ Greg Jennings · October 1, 2026
 
 *Disclosure: I served as Anaconda’s VP of Engineering for AI and am now its VP of Incubation, where I lead practical AI research and development focused on technologies beyond our current product roadmap. In August 2026, Anaconda acquired Enkrypt AI, an AI security company whose products include tools for securing AI agents and implementing the kinds of controls discussed in this article.*
 
-## The note in the package cache
+## The Agentic Dead Drop
 
 On May 12, 2026, an AI agent inside one of OpenAI's training runs hit a wall. Its task depended on a protein database file that it couldn't reach from its sandbox.
 
@@ -96,13 +96,11 @@ Hugging Face's analysts noticed something about those 17,600 actions. The agents
 
 Most of that activity was reconnaissance and payload staging: about 80% of the actions in Hugging Face's phase table. The categories describe what the agents were doing, not whether it worked.
 
-Swarms may try so many things that they are more likely to hit bait than an attacker who tries a few. Suppose one action in a thousand lands on a planted tripwire. An attacker who takes 200 actions has about an 18% chance of setting one off. One that takes 17,600, the size of the Hugging Face campaign, almost certainly will. Even at one tripwire per ten thousand actions, the odds pass 80%.
+Swarms may also try so many things that they're more likely to hit bait than an attacker who tries a few. Suppose one action in a thousand lands on a planted tripwire. An attacker who takes 200 actions has about an 18% chance of setting one off. one that takes 17,600, the size of the Hugging Face campaign, almost certainly will.
 
-We should caveat this heavily by noting that while this may be directionally the case, admittedly, this is a very simplistic way of looking at the math. It only works if we assume every action has the same small, independent chance of hitting a tripwire.
+That arithmetic is too simple, though. It assumes every action has the same small, independent chance of hitting a tripwire, and real attacks don't work that way. An agent can hammer one real endpoint thousands of times without going near a decoy. Worse, it can steal something valuable on its tenth action and trip a wire on its ten-thousandth. So the number that matters isn't how many actions a swarm takes. It's whether it meets a tripwire on its likely path before it does damage, and whether you can act on the alarm in time. As a design rule: **detection time plus containment time must be shorter than time to harm.** 
 
-Real attacks don't work that way. An agent can hammer one real endpoint thousands of times without going near a decoy. Worse, it can steal something valuable on its tenth action and trip a wire on its ten-thousandth. So the number that matters isn't how many actions a swarm takes. It's whether it meets a tripwire on its likely path before it does damage, and whether you can act on the alarm in time. As a design rule: **detection time plus containment time must be shorter than time to harm.** 
-
-Catching one agent also isn't the same as stopping a campaign. A swarm can lose members and carry on, and the channel that spreads a lure can just as easily spread a warning about it.
+Catching one agent also isn't the same as stopping a campaign. A swarm can lose members and carry on, and the channel that spreads a lure can just as easily spread a warning about it. METR eeven found that some agents played a sacrificial role to deliberately end their runs and submit. They set off homemade "tripwires" and reported to the board how the scorer worked, for the good of the other agents that would outlast them.
 
 Still, swarms have a second property defenders can use: their members are copies. A human red team is a handful of people with different instincts. A swarm is copies of one or two models. On OpenAI's message board, more than 50 agents posted within a few hours of one agent's first message ([METR](https://alignmentforum.org/posts/nB8KKapnWGBXtKKiM/brief-independent-investigation-of-agents-behavior-reasoning)). An idea that lands with one copy can spread fast. That cuts both ways, but it means a lure that works on one agent has a real chance of working on many.
 
