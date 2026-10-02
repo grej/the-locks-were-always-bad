@@ -96,16 +96,11 @@ Hugging Face's analysts noticed something about those 17,600 actions. The agents
 
 Most of that activity was reconnaissance and payload staging: about 80% of the actions in Hugging Face's phase table. The categories describe what the agents were doing, not whether it worked.
 
-Swarms try so many things that they are more likely to hit bait than an attacker who tries a few. Suppose one action in a thousand lands on a planted tripwire. An attacker who takes 200 actions has about an 18% chance of setting one off. One that takes 17,600, the size of the Hugging Face campaign, almost certainly will. Even at one tripwire per ten thousand actions, the odds pass 80%.
+Swarms may try so many things that they are more likely to hit bait than an attacker who tries a few. Suppose one action in a thousand lands on a planted tripwire. An attacker who takes 200 actions has about an 18% chance of setting one off. One that takes 17,600, the size of the Hugging Face campaign, almost certainly will. Even at one tripwire per ten thousand actions, the odds pass 80%.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/03-tripwire-odds-dark.png">
-  <img alt="More actions, more chances to trip a wire (hypothetical)" src="images/03-tripwire-odds.png">
-</picture>
+We should caveat this heavily by noting that while this may be directionally the case, admittedly, this is a very simplistic way of looking at the math. It only works if we assume every action has the same small, independent chance of hitting a tripwire.
 
-*Hypothetical model, not measured detection rates: every action has the same small, independent chance of hitting a tripwire. Real attacks don't behave this way; see the text. The horizontal axis is logarithmic.*
-
-That math assumes every action has the same small, independent chance of hitting a tripwire. Real attacks don't work that way. An agent can hammer one real endpoint thousands of times without going near a decoy. Worse, it can steal something valuable on its tenth action and trip a wire on its ten-thousandth. So the number that matters isn't how many actions a swarm takes. It's whether it meets a tripwire on its likely path before it does damage, and whether you can act on the alarm in time. As a design rule: **detection time plus containment time must be shorter than time to harm.**
+Real attacks don't work that way. An agent can hammer one real endpoint thousands of times without going near a decoy. Worse, it can steal something valuable on its tenth action and trip a wire on its ten-thousandth. So the number that matters isn't how many actions a swarm takes. It's whether it meets a tripwire on its likely path before it does damage, and whether you can act on the alarm in time. As a design rule: **detection time plus containment time must be shorter than time to harm.** 
 
 Catching one agent also isn't the same as stopping a campaign. A swarm can lose members and carry on, and the channel that spreads a lure can just as easily spread a warning about it.
 
