@@ -1,0 +1,10 @@
+<meta name="color-scheme" content="dark">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("picture").forEach(function (pic) {
+    var dark = pic.querySelector('source[media*="dark"]');
+    var img = pic.querySelector("img");
+    if (dark && img) { var url = dark.getAttribute("srcset"); dark.remove(); img.src = url; }
+  });
+});
+</script>

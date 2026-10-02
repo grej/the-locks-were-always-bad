@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+html, body { background: #0d1117; }
+body, .markdown-body { color: #e6edf3; }
+.markdown-body a { color: #58a6ff; }
+.markdown-body h1, .markdown-body h2 { color: #f0f6fc; border-bottom-color: #30363d; }
+.markdown-body h3, .markdown-body h4 { color: #f0f6fc; }
+.markdown-body code, .markdown-body pre, .markdown-body .highlight { background: #161b22 !important; color: #e6edf3; }
+.markdown-body blockquote { color: #9198a1; border-left-color: #30363d; }
+.markdown-body hr { background-color: #30363d; }
