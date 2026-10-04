@@ -182,6 +182,7 @@ What should resonate throughout is the design goal. We want to build sensitive s
 - [AIxCC results](https://www.darpa.mil/news/2025/aixcc-results), DARPA (corrected figures); [AIxCC Main Stage Presentation](https://www.trailofbits.com/documents/AIxCC_Main_Stage_Presentation.pdf), DARPA / Trail of Bits, August 2025
 - [EU Cyber Resilience Act: 24-hour reporting duties](https://www.jonesday.com/en/insights/2026/07/eu-cyber-resilience-act-24hour-reporting-duties-start-september-11-2026), Jones Day
 - [Moran introduces act to give Washington an early-warning system for dangerous AI incidents](https://www.kltv.com/2026/06/26/moran-introduces-act-give-washington-an-early-warning-system-dangerous-ai-incidents/), KLTV, June 26, 2026
+- [Distorted Intelligence at the AI Frontier](https://www.project-syndicate.org/commentary/distorted-intelligence-training-byproduct-may-explain-ai-security-breaches-by-daron-acemoglu-2026-09), Daron Acemoglu, Project Syndicate, September 28, 2026
 - [LawZero](https://en.wikipedia.org/wiki/LawZero), Wikipedia; [Canada and Germany funding announcement](https://www.prnewswire.com/news-releases/lawzero-receives-a-commitment-of-up-to-300m-in-joint-funding-from-canada-and-germany-302880694.html), September 16, 2026
 - [Exploring the Latent Space of Programming Styles: How Persona Prompting Unlocks Hidden AI Capabilities](https://www.anaconda.com/blog/persona-programming-ai), Greg Jennings, Anaconda, March 7, 2025
 - [The assistant axis](https://www.anthropic.com/research/assistant-axis), Anthropic
